@@ -42,11 +42,15 @@ public class PageObject extends DriverManagerFactory {
 
     public void escolherMeses() {
         driver.findElement(listaSelect).click();
+        new WebDriverWait(driver, 5).until(ExpectedConditions.
+                elementToBeClickable((By.xpath("//*[@id=\"formInvestimento\"]/div[4]/div[2]/div[2]/ul/li[1]/a"))));
         driver.findElement(opcaoMeses).click();
     }
 
     public void escolherAnos() {
         driver.findElement(listaSelect).click();
+       new WebDriverWait(driver, 5).until(ExpectedConditions.
+                elementToBeClickable((By.xpath("//*[@id=\"formInvestimento\"]/div[4]/div[2]/div[2]/ul/li[2]/a"))));
         driver.findElement(opcaoAnos).click();
     }
 
